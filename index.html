@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Zulqurnain Ali | Flutter Developer</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2 class="logo">MZA</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills" id="skills-link">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <img src="personal/My_Photo.jpeg" class="selfie" alt="Self Photo">
+            <h1>Hello, I'm</h1>
+            <h2>Muhammad Zulqurnain Ali</h2>
+            <p>Flutter Developer | Mobile App Specialist</p>
+            <div class="hero-buttons">
+                <button onclick="scrollToProjects()">View My Work</button>
+                <a href="assets/CV.pdf" download class="cv-button">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <!-- Row 1 -->
+            <div class="project-card" onclick="openGallery(0)">
+                <img src="project_1/cover.png" alt="Darzi Khata Cover">
+                <div class="project-info">
+                    <h3>Darzi Khata</h3>
+                </div>
+            </div>
+            <div class="project-card" onclick="openGallery(1)">
+                <img src="project_2/cover.png" alt="School Management App Cover">
+                <div class="project-info">
+                    <h3>School Management App</h3>
+                </div>
+            </div>
+            <div class="project-card" onclick="openGallery(2)">
+                <img src="project_3/cover.png" alt="Doctor Appointment App Cover">
+                <div class="project-info">
+                    <h3>Doctor Appointment App</h3>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="project-card">
+                <img src="Project 4/cover.png" alt="Project 4 Cover">
+                <div class="project-info">
+                    <h3>Project 4</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="Project 5/cover.png" alt="Project 5 Cover">
+                <div class="project-info">
+                    <h3>Project 5</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="Project 6/cover.png" alt="Project 6 Cover">
+                <div class="project-info">
+                    <h3>Project 6</h3>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="project-card">
+                <img src="Project 7/cover.png" alt="Project 7 Cover">
+                <div class="project-info">
+                    <h3>Project 7</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="Project 8/cover.png" alt="Project 8 Cover">
+                <div class="project-info">
+                    <h3>Project 8</h3>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="Project 9/cover.png" alt="Project 9 Cover">
+                <div class="project-info">
+                    <h3>Project 9</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Modal -->
+    <!-- <div id="gallery" class="gallery">
+        <div class="gallery-header">
+            <span onclick="closeGallery()">&#10005;</span>
+            <div id="counter"></div>
+        </div>
+        <div class="gallery-body"> -->
+    <!-- Project 1 Slides -->
+    <!-- <img class="slide" src="Project 1/1_screenshot.png">
+            <img class="slide" src="Project 1/2_screenshot.png">
+            <img class="slide" src="Project 1/3_screenshot.png">
+            <img class="slide" src="Project 1/4_screenshot.png"> -->
+
+    <!-- Project 2 Slides -->
+    <!-- <img class="slide" src="project2/1.png">
+            <img class="slide" src="project2/2.png">
+            <img class="slide" src="project2/3.png"> -->
+
+    <!-- Project 3 Slides -->
+    <!-- <img class="slide" src="project3/1.png">
+            <img class="slide" src="project3/2.png">
+
+            <button class="nav left" onclick="prevSlide()">&#10094;</button>
+            <button class="nav right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div> -->
+
+    <!-- Gallery Modal -->
+    <div id="gallery" class="gallery">
+        <div class="gallery-header">
+            <span onclick="closeGallery()">&#10005;</span>
+            <div id="counter"></div>
+        </div>
+        <div class="gallery-body">
+            <img class="slide active" src="project_1/1_screenshot.png">
+            <img class="slide" src="project_1/2_screenshot.png">
+            <img class="slide" src="project_1/3_screenshot.png">
+            <img class="slide" src="project_1/4_screenshot.png">
+            <button class="nav left" onclick="prevSlide()">&#10094;</button>
+            <button class="nav right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <div id="gallery" class="gallery">
+        <div class="gallery-header">
+            <span onclick="closeGallery()">&#10005;</span>
+            <div id="counter"></div>
+        </div>
+        <div class="gallery-body">
+            <img class="slide active" src="project_2/1_screenshot.png">
+            <img class="slide" src="project_2/2_screenshot.png">
+            <img class="slide" src="project_2/3_screenshot.png">
+            <img class="slide" src="project_2/4_screenshot.png">
+            <button class="nav left" onclick="prevSlide()">&#10094;</button>
+            <button class="nav right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <div id="gallery" class="gallery">
+        <div class="gallery-header">
+            <span onclick="closeGallery()">&#10005;</span>
+            <div id="counter"></div>
+        </div>
+        <div class="gallery-body">
+            <img class="slide active" src="project_3/cover.png">
+            <img class="slide" src="project_3/2_screenshot.png">
+            <img class="slide" src="project_3/3_screenshot.png">
+            <img class="slide" src="project_3/4_screenshot.png">
+            <button class="nav left" onclick="prevSlide()">&#10094;</button>
+            <button class="nav right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h4>Flutter</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Dart</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Firebase</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>UI/UX</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Git/GitHub</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>REST APIs</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>State Management</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Figma</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Android Studio/Xcode</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="70%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Testing/Debugging</h4>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="85%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="mailto:muhammadzulqurnain573@gmail.com" class="email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <path d="M12 13.5l-11-7h22l-11 7zm0 1.5l-12-7v12h24v-12l-12 7z" />
+                </svg>
+                muhammadzulqurnain573@gmail.com
+            </a>
+            <div class="socials">
+                <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="icons/github.svg" alt="GitHub"></a>
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+    </section> -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="mailto:muhammadzulqurnain573@gmail.com" class="email">
+                <!-- Inline SVG for email -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <path d="M12 13.5l-11-7h22l-11 7zm0 1.5l-12-7v12h24v-12l-12 7z" />
+                </svg>
+                muhammadzulqurnain573@gmail.com
+            </a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/muhammad-zulqurnain-ali-98bb19218/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="30" height="30">
+                        <path
+                            d="M4.98 3.5c0 1.381-1.117 2.5-2.49 2.5s-2.49-1.119-2.49-2.5c0-1.381 1.116-2.5 2.49-2.5s2.49 1.119 2.49 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.982v16h5v-8.5c0-4.57 6-4.938 6 0v8.5h5v-10c0-7.729-8-7.449-10-3.657v-2.343z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/M-Zulqurnain688" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="30" height="30">
+                        <path
+                            d="M12 .5c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.113.793-.262.793-.583 0-.288-.01-1.049-.015-2.057-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.333-5.467-5.933 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.467 11.467 0 013-.404c1.02.005 2.047.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.814 1.102.814 2.222 0 1.606-.015 2.903-.015 3.293 0 .322.19.701.8.582 4.765-1.588 8.2-6.086 8.2-11.387 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://web.facebook.com/people/Mh-Zulqurnain/100016698077348" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="30" height="30">
+                        <path
+                            d="M22 0h-20c-1.104 0-2 .896-2 2v20c0 1.104.896 2 2 2h10v-9h-3v-4h3v-3c0-3.086 1.883-4 4.637-4 1.312 0 2.437.098 2.763.142v3.201l-1.895.001c-1.486 0-1.769.705-1.769 1.738v2.918h3.538l-.462 4h-3.076v9h6c1.104 0 2-.896 2-2v-20c0-1.104-.896-2-2-2z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="30" height="30">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.849.07 1.17.056 1.977.24 2.435.403a4.924 4.924 0 011.787 1.13 4.924 4.924 0 011.13 1.787c.163.458.347 1.265.403 2.435.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.056 1.17-.24 1.977-.403 2.435a4.924 4.924 0 01-1.13 1.787 4.924 4.924 0 01-1.787 1.13c-.458.163-1.265.347-2.435.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.17-.056-1.977-.24-2.435-.403a4.924 4.924 0 01-1.787-1.13 4.924 4.924 0 01-1.13-1.787c-.163-.458-.347-1.265-.403-2.435-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.056-1.17.24-1.977.403-2.435a4.924 4.924 0 011.13-1.787 4.924 4.924 0 011.787-1.13c.458-.163 1.265-.347 2.435-.403 1.265-.058 1.645-.07 4.849-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.276.058-2.15.25-2.905.532a6.925 6.925 0 00-2.507 1.64 6.925 6.925 0 00-1.64 2.507c-.282.755-.474 1.63-.532 2.905-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.058 1.276.25 2.15.532 2.905a6.925 6.925 0 001.64 2.507 6.925 6.925 0 002.507 1.64c.755.282 1.63.474 2.905.532 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.276-.058 2.15-.25 2.905-.532a6.925 6.925 0 002.507-1.64 6.925 6.925 0 001.64-2.507c.282-.755.474-1.63.532-2.905.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.276-.25-2.15-.532-2.905a6.925 6.925 0 00-1.64-2.507 6.925 6.925 0 00-2.507-1.64c-.755-.282-1.63-.474-2.905-.532-1.28-.058-1.688-.072-4.947-.072z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -238,6 +238,43 @@ nav a {
     width: 0;
 }
 
+/* GitHub Section */
+.github-activity {
+    padding: 120px 10%;
+    text-align: center;
+    background: #0f172a;
+}
+
+.github-activity h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.github-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.github-card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.github-card:hover {
+    transform: scale(1.05);
+}
+
+.github-card img {
+    max-width: 100%;
+}
+
 /* Contact */
 .contact {
     padding: 80px 10%;
@@ -345,6 +382,29 @@ nav a {
     right: 20px;
 }
 
+.github-stats img {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.github-stats img:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Responsive for grid */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Responsive */
 /* @media(max-width:768px) {
     .skills-container {
@@ -360,16 +420,3 @@ nav a {
         gap: 15px;
     }
 } */
-
-/* Responsive for grid */
-@media (max-width: 1024px) {
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-}

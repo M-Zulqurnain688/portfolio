@@ -11,7 +11,7 @@ function openGallery(projectIndex = 0) {
     // Only show slides belonging to this project
     let startIndex = 0;
     if (projectIndex === 1) startIndex = 4;  // Project 2 slides start
-    if (projectIndex === 2) startIndex = 7;  // Project 3 slides start
+    if (projectIndex === 2) startIndex = 8;  // Project 3 slides start
     slides[startIndex].classList.add("active");
     current = startIndex;
 
